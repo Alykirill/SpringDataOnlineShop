@@ -30,6 +30,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     CategoryRepository categoryRepository;
 
+
     @Override
     public Optional<UserDto> addUserInfo(String email, String name, String phone) {
         if(!userRepository.existsById(email)){
