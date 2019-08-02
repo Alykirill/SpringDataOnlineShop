@@ -3,12 +3,10 @@ package com.telran.telranshopspringdata.controller;
 import com.telran.telranshopspringdata.controller.dto.AddUnitResponseDto;
 import com.telran.telranshopspringdata.controller.dto.CategoryDto;
 import com.telran.telranshopspringdata.controller.dto.ProductDto;
-import com.telran.telranshopspringdata.data.AdminRepository;
 import com.telran.telranshopspringdata.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 

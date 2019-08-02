@@ -1,7 +1,9 @@
 package com.telran.telranshopspringdata.service;
 
-import com.telran.telranshopspringdata.data.AdminRepository;
-import com.telran.telranshopspringdata.data.CategoryRepository;
+import com.telran.telranshopspringdata.data.repositories.OrderRepository;
+import com.telran.telranshopspringdata.data.repositories.CategoryRepository;
+import com.telran.telranshopspringdata.data.repositories.ProductRepository;
+import com.telran.telranshopspringdata.data.entity.CategoryEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -14,13 +16,21 @@ import java.math.BigDecimal;
 public class AdminServiceImpl implements AdminService{
 
     @Autowired
-    AdminRepository adminRepository;
+    OrderRepository orderRepository;
 
     @Autowired
     CategoryRepository categoryRepository;
 
+    @Autowired
+    ProductRepository productRepository;
+
     @Override
     public String addCategory(String categoryName) {
+        if (!categoryRepository.existsById(categoryName)) {
+            CategoryEntity entity = new CategoryEntity();
+            return entity.getId();
+
+        }
         return null;
     }
 

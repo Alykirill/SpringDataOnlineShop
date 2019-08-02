@@ -14,6 +14,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "shopping_carts")
+@Builder
 public class ShoppingCartEntity {
     @Id
     @GeneratedValue(generator = "UUID")

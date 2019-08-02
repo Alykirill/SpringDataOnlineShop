@@ -1,4 +1,4 @@
-package com.telran.telranshopspringdata.data;
+package com.telran.telranshopspringdata.data.repositories;
 
 import com.telran.telranshopspringdata.data.entity.UserEntity;
 import org.springframework.data.repository.CrudRepository;

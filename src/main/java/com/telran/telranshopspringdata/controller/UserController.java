@@ -7,6 +7,7 @@ import com.telran.telranshopspringdata.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -22,9 +23,9 @@ public class UserController {
                 .orElseThrow();
     }
 
-    @GetMapping("user/{userEmail}")
-    public UserDto getUserInfo(@PathVariable("userEmail") String userEmail) {
-        return service.getUserInfo(userEmail)
+    @GetMapping("user")
+    public UserDto getUserInfo(Principal principal) {
+        return service.getUserInfo(principal.getName())
                 .orElseThrow();
     }
 
